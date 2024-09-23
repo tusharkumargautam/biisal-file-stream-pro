@@ -407,6 +407,24 @@
             </center>
 
         </footer>
+        <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Disable all player buttons initially
+        const playerButtons = document.querySelectorAll('.downloadBtn button');
+        playerButtons.forEach(button => {
+            button.disabled = true;
+            button.style.opacity = 0.5; // Visual cue that buttons are disabled
+        });
+
+        // Function to enable buttons after 2 seconds
+        setTimeout(() => {
+            playerButtons.forEach(button => {
+                button.disabled = false;
+                button.style.opacity = 1; // Restore button opacity
+            });
+        }, 2000); // 2000 ms delay
+    });
+        </script>
 
 </body>
 
